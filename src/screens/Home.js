@@ -2,8 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import CountryList from '../components/CountryList';
 import Total from '../components/Total';
-import { FaGithubSquare } from "react-icons/fa";
-import { FaLinkedin } from "react-icons/fa";
+import { FaGithubSquare } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
 
 
 const Home = () => {
