@@ -1,4 +1,5 @@
 import React from 'react';
+// import { Link } from 'react-router-dom';
 
 const Total = ({ casesTotalsNO, deathsTotal, recovered }) => {
     return (
@@ -6,22 +7,22 @@ const Total = ({ casesTotalsNO, deathsTotal, recovered }) => {
             <h3>Global Coronavirus Information</h3>
             <div className="indiv">
                 <h6>Global</h6>
-                <h3>Coronavirus Total Cases</h3>
-                <h4>{casesTotalsNO}</h4>
+                <h4>Coronavirus Total Cases</h4>
+                <h5> <span className="badge badge-warning">{casesTotalsNO}</span> </h5>
             </div>
 
             <div className="indiv">
                 <h6>Global</h6>
-                <h3>Total Deaths</h3>
-                <h4>{deathsTotal}</h4>
+                <h4>Total Deaths</h4>
+                <h5> <span className="badge badge-danger">{deathsTotal}</span> </h5>
             </div>
 
             <div className="indiv">
                 <h6>Global</h6>
-                <h3>Total Recovered</h3>
-                <h4>{recovered}</h4>
+                <h4>Total Recovered</h4>
+                <h5> <span className="badge badge-success">{recovered}</span> </h5>
             </div>
-
+            {/* <Link to="/map" className="map">Indian Statistics</Link> */}
         </div>
 
     );

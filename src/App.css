@@ -1,4 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Moulpali&display=swap');
+body{
+  font-family: 'Moulpali', cursive;
+  background-color: #111!important;
+  color: #dee!important;
+}
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+}
 .App {
   text-align: center;
 }
@@ -7,17 +15,17 @@
   
 }
 .indiv{
-  border: 1px solid #111;
+  border: 1px solid #dee;
   padding: 20px;
-  border-radius: 12px;
+  border-radius: 6px;
   margin-bottom: 20px;
 }
 
 .indiv-country{
-  border: 1px solid #111;
-  padding: 20px;
+  border: 1px solid #dee;
+  padding: 15px;
   margin-bottom: 20px;
-  border-radius: 10px;
+  border-radius: 6px;
 }
 .indiv-country .bigFont{
   font-size: 14px;
@@ -40,20 +48,47 @@ body::-webkit-scrollbar{
 }
 .profile a{
   text-transform: none;
-  color: #111;
+  color: #dee;
   font-size: 30px;
   margin-right: 10px;
 }
 .profile h3{
   margin-top: 20px;
   font-weight: 700;
+  margin-bottom: 20px;
 }
 .about{
   margin-bottom: 30px;
-  background-color: #dee;
   padding: 10px;
 }
 
 .totalContainer{
   margin-bottom: 30px;
+}
+.about .map{
+  text-decoration: none;
+  color: #dee;
+  /* background-color: #dee; */
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #dee;
+  font-weight: 700;
+}
+
+.indian{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.searchBar input{
+  background-color: transparent;
+  width: 270px;
+}
+.searchBar input::placeholder{
+  color:#dee;
+}
+
+
+.indian h3{
+  margin-top: 20px;
 }

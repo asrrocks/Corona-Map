@@ -1,9 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, Image } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import CountryList from '../components/CountryList';
 import Total from '../components/Total';
 import { FaGithubSquare } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
+import flag from '../assets/64.png'
+
 
 
 const Home = () => {
@@ -52,13 +55,14 @@ const Home = () => {
         <div className="mainSection">
             <Container fluid>
                 <Row>
-                    <Col xs={12} lg={3}>
+                    <Col xs={12} lg={4}>
                         <div className="about">
-                            <h3>Designed & Developed By</h3>
+                            <h3>About me</h3>
                             <div className="profile">
                                 <h4>
-                                    Anubhav Singh
+                                    Anubhav Singh <img src={flag} width="40" />
                                 </h4>
+
                                 <p>
                                     Full Stack Web Developer, Alphacode
 
@@ -70,6 +74,7 @@ const Home = () => {
                                 <a href="https://www.linkedin.com/in/anubhav-singh-36983010a/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                                 <h3>"STAY HOME, STAY SAFE"</h3>
                             </div>
+                            <Link to="/map" className="map">Indian Statistics</Link>
 
                         </div>
                     </Col>
@@ -78,7 +83,7 @@ const Home = () => {
                         <Total casesTotalsNO={casesTotal.cases} deathsTotal={casesTotal.deaths} recovered={casesTotal.recovered} />
 
                     </Col>
-                    <Col xs={12} lg={5}>
+                    <Col xs={12} lg={4}>
                         <h3>Country Wise Information</h3>
                         <div className="searchBar">
                             <Form>
