@@ -1,5 +1,4 @@
 import React from 'react'
-import flag from '../assets/64.png'
 
 const CountryList = ({ countryName, flag, totalCases, casesToday, activeCases, deaths, deathsToday, recoveredCases, criticalCases }) => {
     return (
