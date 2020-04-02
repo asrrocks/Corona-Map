@@ -30,7 +30,7 @@ const Home = () => {
     }
 
     const getDataTotal = async () => {
-        const responseTotal = await fetch('https://coronavirus-19-api.herokuapp.com/all')
+        const responseTotal = await fetch('https://corona.lmao.ninja/all')
         const dataTotal = await responseTotal.json();
         setCasesTotal(dataTotal);
         // console.log(dataTotal);
@@ -80,7 +80,7 @@ const Home = () => {
                     </Col>
                     <Col xs={12} lg={4}>
 
-                        <Total casesTotalsNO={casesTotal.cases} deathsTotal={casesTotal.deaths} recovered={casesTotal.recovered} />
+                        <Total casesTotalsNO={casesTotal.cases} deathsTotal={casesTotal.deaths} recovered={casesTotal.recovered} active={casesTotal.active} affectedCount={casesTotal.affectedCountries} />
 
                     </Col>
                     <Col xs={12} lg={4}>
