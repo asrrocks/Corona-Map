@@ -106,7 +106,7 @@ body::-webkit-scrollbar{
 
 }
 .bgTransp{
-  color: #111;
+  color: #fff;
   font-weight: 700;
   text-transform: uppercase;
   /* background-color: #111; */

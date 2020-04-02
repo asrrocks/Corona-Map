@@ -14,7 +14,7 @@ const District = () => {
         const DistData = await response.json();
         setDistData(DistData);
         // setDistDataIndiv(DistData.state.districtData);
-        console.log(DistData);
+        // console.log(DistData);
     }
 
     return (
