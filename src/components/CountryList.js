@@ -1,9 +1,10 @@
 import React from 'react'
+import flag from '../assets/64.png'
 
-const CountryList = ({ countryName, totalCases, casesToday, activeCases, deaths, deathsToday, recoveredCases, criticalCases }) => {
+const CountryList = ({ countryName, flag, totalCases, casesToday, activeCases, deaths, deathsToday, recoveredCases, criticalCases }) => {
     return (
         <div className="indiv-country">
-            <h4>{countryName}</h4>
+            <h4>{countryName}&nbsp;<img src={flag} width="50" /></h4>
             <p>
                 <span className="badge badge-warning bigFont" id="countryCasesTotal">Cases : {totalCases} </span> | <span className="badge badge-warning bigFont"
                     id="countryCasesToday">Today :{casesToday} </span> | <span

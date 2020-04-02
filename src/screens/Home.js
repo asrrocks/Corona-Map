@@ -22,7 +22,7 @@ const Home = () => {
 
 
     const getDataTotalCountry = async () => {
-        const response = await fetch('https://coronavirus-19-api.herokuapp.com/countries')
+        const response = await fetch('https://corona.lmao.ninja/countries')
         const data = await response.json();
         setCases(data);
         setSearchData(data)
@@ -97,7 +97,7 @@ const Home = () => {
 
                             {searchData.map(countries => (
 
-                                <CountryList key={countries.country} countryName={countries.country} totalCases={countries.cases} casesToday={countries.todayCases} activeCases={countries.active} deaths={countries.deaths} deathsToday={countries.todayDeaths} recoveredCases={countries.recovered} criticalCases={countries.critical} />
+                                <CountryList key={countries.country} countryName={countries.country} flag={countries.countryInfo.flag} totalCases={countries.cases} casesToday={countries.todayCases} activeCases={countries.active} deaths={countries.deaths} deathsToday={countries.todayDeaths} recoveredCases={countries.recovered} criticalCases={countries.critical} />
                             ))}
                         </div>
 
