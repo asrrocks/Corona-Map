@@ -74,7 +74,8 @@ const Home = () => {
                                 <a href="https://www.linkedin.com/in/anubhav-singh-36983010a/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                                 <h3>"STAY HOME, STAY SAFE"</h3>
                             </div>
-                            <Link to="/map" className="map">Indian Statistics</Link>
+                            <Link to="/map" className="map">Indian Statistics</Link> &nbsp;
+                            <Link to="/district" className="map">District Wise Data</Link>
 
                         </div>
                     </Col>
