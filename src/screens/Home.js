@@ -25,7 +25,7 @@ const Home = () => {
         const response = await fetch('https://corona.lmao.ninja/countries?sort=cases')
         const data = await response.json();
         setCases(data.slice(1));
-        setSearchData(data.slice(1))
+        setSearchData(data)
         // console.log(data);
     }
 
