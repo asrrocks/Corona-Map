@@ -14,9 +14,9 @@ const Map = () => {
     }, []);
 
     const getMapData = async () => {
-        const response = await fetch('https://api.rootnet.in/covid19-in/stats/latest');
+        const response = await fetch('https://api.covid19india.org/data.json');
         const mapData = await response.json();
-        setMapCases(mapData.data.regional);
+        setMapCases(mapData.statewise.slice(1));
         // console.log(mapData.data.regional);
     }
 
@@ -33,8 +33,8 @@ const Map = () => {
                                 <tr>
                                     <th>Sr.no</th>
                                     <th>State</th>
-                                    <th>Total Cases</th>
-                                    <th>Discharged</th>
+                                    <th>Cases</th>
+                                    <th>Recovered</th>
                                     <th>Deaths</th>
                                 </tr>
                             </thead>
@@ -42,9 +42,9 @@ const Map = () => {
                                 {mapcases.map(states => (
                                     <tr>
                                         <td>{i++}</td>
-                                        <td>{states.loc}</td>
-                                        <td>{states.confirmedCasesIndian + states.confirmedCasesForeign}</td>
-                                        <td>{states.discharged}</td>
+                                        <td>{states.state}</td>
+                                        <td>{states.confirmed}</td>
+                                        <td>{states.recovered}</td>
                                         <td>{states.deaths}</td>
                                     </tr>
 

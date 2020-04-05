@@ -13,11 +13,13 @@ const Home = () => {
     const [cases, setCases] = useState([]);
     const [casesTotal, setCasesTotal] = useState([]);
     const [search, setSearch] = useState('');
-    const [searchData, setSearchData] = useState([])
+    const [searchData, setSearchData] = useState([]);
+    const [indianVal, setIndianVal] = useState([]);
 
     useEffect(() => {
         getDataTotalCountry();
         getDataTotal();
+        indian();
     }, []);
 
 
@@ -48,6 +50,13 @@ const Home = () => {
 
     }
 
+    const indian = async () => {
+        const responseIndian = await fetch('https://api.covid19india.org/data.json')
+        const indianD = await responseIndian.json();
+        setIndianVal(indianD.statewise[0]);
+        console.log(indianD);
+    }
+
 
 
     return (
@@ -57,7 +66,7 @@ const Home = () => {
                 <Row>
                     <Col xs={12} lg={4}>
                         <div className="about">
-                            <h3>About me</h3>
+                            <h3>About Me</h3>
                             <div className="profile">
                                 <h4>
                                     Anubhav Singh <img src={flag} width="40" />
@@ -74,8 +83,20 @@ const Home = () => {
                                 <a href="https://www.linkedin.com/in/anubhav-singh-36983010a/" target="_blank" rel="noopener noreferrer"><FaLinkedin /></a>
                                 <h3>"STAY HOME, STAY SAFE"</h3>
                             </div>
-                            <Link to="/map" className="map">Indian Statistics</Link> <br /><br />
-                            <Link to="/district" className="map">District Wise Data</Link>
+                            <Link to="/map" className="map">Statewise - India</Link> <br /><br />
+                            <Link to="/district" className="map">District Wise - India</Link>
+
+                            <div className="indianData">
+                                <h4>India Right Now !!!</h4>
+                                <h6>Total Cases : <span className="badge badge-warning">{indianVal.confirmed}</span> </h6>
+                                <h6>Active : <span className="badge badge-light">{indianVal.active}</span> </h6>
+                                <h6>Deaths : <span className="badge badge-danger">{indianVal.deaths}</span> </h6>
+                                <h6>Recovered : <span className="badge badge-success">{indianVal.recovered}</span> </h6>
+                                <br />
+                                <p>Last Updated - {indianVal.lastupdatedtime}</p>
+                                <p>Click on Indian Statewise button for more info</p>
+
+                            </div>
 
                         </div>
                     </Col>
