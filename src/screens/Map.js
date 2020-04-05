@@ -24,14 +24,13 @@ const Map = () => {
         <Container fluid>
             <Row>
 
-                <Col xs={12} lg={7}>
+                <Col xs={12} lg={6}>
                     <div className="indian">
 
                         <h3>Indian Statistics</h3>
                         <Table striped bordered hover variant="dark">
                             <thead>
                                 <tr>
-                                    <th>Sr.no</th>
                                     <th>State</th>
                                     <th>Cases</th>
                                     <th>Recovered</th>
@@ -41,7 +40,6 @@ const Map = () => {
                             <tbody>
                                 {mapcases.map(states => (
                                     <tr>
-                                        <td>{i++}</td>
                                         <td>{states.state}</td>
                                         <td>{states.confirmed}</td>
                                         <td>{states.recovered}</td>
@@ -55,7 +53,7 @@ const Map = () => {
                         </Table>
                     </div>
                 </Col>
-                <Col xs={12} lg={5}>
+                <Col xs={12} lg={6}>
                     <Contacts />
                 </Col>
             </Row>
