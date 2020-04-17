@@ -24,7 +24,7 @@ const Home = () => {
 
 
     const getDataTotalCountry = async () => {
-        const response = await fetch('https://corona.lmao.ninja/countries?sort=cases')
+        const response = await fetch('https://corona.lmao.ninja/v2/countries?sort=cases')
         const data = await response.json();
         setCases(data);
         setSearchData(data)
@@ -32,7 +32,7 @@ const Home = () => {
     }
 
     const getDataTotal = async () => {
-        const responseTotal = await fetch('https://corona.lmao.ninja/all')
+        const responseTotal = await fetch('https://corona.lmao.ninja/v2/all')
         const dataTotal = await responseTotal.json();
         setCasesTotal(dataTotal);
         // console.log(dataTotal);
