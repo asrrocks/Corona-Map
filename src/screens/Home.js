@@ -1,4 +1,4 @@
-import React, { useEffect, useState, Image } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
 import CountryList from '../components/CountryList';
 import Total from '../components/Total';
@@ -6,6 +6,7 @@ import { FaGithubSquare } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { Link } from 'react-router-dom';
 import flag from '../assets/64.png'
+
 
 
 
@@ -54,12 +55,16 @@ const Home = () => {
         const responseIndian = await fetch('https://api.covid19india.org/data.json')
         const indianD = await responseIndian.json();
         setIndianVal(indianD.statewise[0]);
-        console.log(indianD);
+        // console.log(indianD);
     }
+
+    // console.log(parseInt(indianVal.confirmed) + parseInt(indianVal.confirmed))
 
 
 
     return (
+
+
 
         <div className="mainSection">
             <Container fluid>
@@ -69,7 +74,7 @@ const Home = () => {
                             <h3>About Me</h3>
                             <div className="profile">
                                 <h4>
-                                    Anubhav Singh <img src={flag} width="40" />
+                                    Anubhav Singh <img src={flag} width="40" alt="indian flag" />
                                 </h4>
 
                                 <p>
@@ -93,7 +98,7 @@ const Home = () => {
                                 <h6>Deaths : <span className="badge badge-danger">{indianVal.deaths}</span> </h6>
                                 <h6>Recovered : <span className="badge badge-success">{indianVal.recovered}</span> </h6>
                                 <br />
-                                <p>Last Updated - {indianVal.lastupdatedtime}</p>
+                                <p>Last Updated - {new Date(indianVal.lastupdatedtime).toDateString()}</p>
                                 <p>Click on Indian Statewise button for more info</p>
 
                             </div>

@@ -8,7 +8,6 @@ const Map = () => {
 
     const [mapcases, setMapCases] = useState([]);
 
-    var i = 1;
     useEffect(() => {
         getMapData();
     }, []);

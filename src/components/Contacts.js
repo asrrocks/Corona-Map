@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Table } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 
 const Contacts = () => {

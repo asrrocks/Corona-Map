@@ -3,7 +3,7 @@ import React from 'react'
 const CountryList = ({ countryName, flag, totalCases, casesToday, activeCases, deaths, deathsToday, recoveredCases, criticalCases }) => {
     return (
         <div className="indiv-country">
-            <h4>{countryName}&nbsp;<img src={flag} width="50" /></h4>
+            <h4>{countryName}&nbsp;<img src={flag} width="50" alt={countryName} /></h4>
             <p>
                 <span className="badge badge-warning bigFont" id="countryCasesTotal">Cases : {totalCases} </span> | <span className="badge badge-warning bigFont"
                     id="countryCasesToday">Today :{casesToday} </span> | <span
