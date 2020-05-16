@@ -98,7 +98,7 @@ const Home = () => {
                                 <h6>Deaths : <span className="badge badge-danger">{indianVal.deaths}</span> </h6>
                                 <h6>Recovered : <span className="badge badge-success">{indianVal.recovered}</span> </h6>
                                 <br />
-                                <p>Last Updated - {new Date(indianVal.lastupdatedtime).toDateString()}</p>
+                                <p>Last Updated - {indianVal.lastupdatedtime}</p>
                                 <p>Click on Indian Statewise button for more info</p>
 
                             </div>
